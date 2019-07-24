@@ -1,7 +1,7 @@
 %% start of file `template.tex'.
 %% Copyright 2006-2010 Xavier Danaux (xdanaux@gmail.com).
 %% Copyright 2010-2011 Mark Liu (markwayneliu@gmail.com).
-%% Copyright 2016 Jan Kadlec (jan.kadlec.cz@gmail.com).
+%% Copyright 2019 Jan Kadlec (jan.kadlec.cz@gmail.com).
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License version 1.3c,
@@ -19,7 +19,7 @@
 \usepackage[utf8]{inputenc}
 
 % adjust the page margins
-\usepackage[scale=0.86]{geometry}
+\usepackage[scale=0.88]{geometry}
 
 % personal data
 \firstname{Jan}
@@ -27,7 +27,9 @@
 \email{jan.kadlec.cz@gmail.com}
 \homepage{uk.linkedin.com/in/kadlecphx}
 \phone{+447429638599}
-\extrainfo{\url{github.com/jkadlec}}
+\extrainfo{\url{github.com/jkadlec} \\
+                                    \\
+	   VISA STATUS: US green card}
 
 %----------------------------------------------------------------------------------
 %            content
@@ -37,23 +39,23 @@
 \maketitle
 
 \section{Summary}
-\cvline{}{I'm a pragmatic software engineer with solid \textbf{computer science} background. My strongest skills are \textbf{Python, C, C\texttt{++} and Go} programming, expert knowledge of \textbf{computer networks and computer architectures} and experience in natural language processing (\textbf{NLP}). 6 years of industry experience, out of which 2 were part-time.}
+\cvline{}{I'm a pragmatic software engineer with solid \textbf{computer science} background. My strongest skills are \textbf{Python, C, C\texttt{++} and Go} programming, expert knowledge of \textbf{computer networks and computer architectures} and experience in natural language processing (\textbf{NLP}) and (\textbf{Speech processing}).}
 
 \section{Experience}
 
 \cventry{7/2016 - Present}{Director}{Pythonic Limited}{London, UK}{}{
-Python consulting - computer networks, natural language processing, data processing. I have two clients at the moment, large cloud provider and a leading consultancy firm.
+Consulting - Python, C, computer networks, natural language processing, data pipelines, Python and CS mentoring. Initially, I've worked with a cloud provider on automating their managed database offerings deployments. My current client is one of the big 4 consultancies, where I've helped to build a machine learning solution from scratch. It started as a simple demo and evolved into a system which currently processes thousands of phone calls and documents a day. 
 }
 
 \cventry{3/2016--6/2016}{Tech Entrepreneur}{Entrepreneur First}{London, UK}{}{
 Entrepreneur First is Europe's leading tech startup accelerator. Members are selected purely for their (technical) talents. I've explored two ideas at EF: measuring employee happiness from their mails and chats (technologies used: Python, NTLK, gensim, scikit-learn) and a smart testing solution for mobile devices.}
 
-\cventry{4/2015--Present}{Lead Developer}{Phonexia}{Brno, CZ}{}{
-Phonexia is a leading provider of speech technologies. I joined to create a new SaaS machine learning product, the main focus being making corporate meetings more efficient, but the platform was modular. Most of the solution was written in Python using Flask, some parts, such as realtime streaming support were written in Go. Data storage used MySQL, Redis and Elasticsearch. The project used a microservice architecture, with each service dockerized. Used NLP libraries such as NLTK and gensim to analyse automatic transcriptions.
+\cventry{4/2015--9/2016}{Lead Developer}{Phonexia}{Brno, CZ}{}{
+Phonexia is a leading provider of speech technologies. I joined to create a new SaaS machine learning product, the main focus being making corporate meetings more efficient, but the platform was modular. Most of the solution was written in Python using Flask and Celery, some parts, such as realtime streaming support, were written in Go. Data storage via MySQL, Redis and Elasticsearch. The project used a microservice architecture, with each service dockerized.
 }
 
 \cventry{10/2010--4/2015}{Software engineer}{CZ.NIC Labs}{Prague, CZ}{}{
-CZ.NIC is the body governing the .cz domain. I was part of the Knot DNS project - an open source authoritative name server. At this time it is deployed at several root zone nodes, which makes it an important part of today's Internet infrastructure. My tasks included creating highly optimized multithreaded code in C and writing functional tests in Python. Most of the code I've written is still in production. I was also in charge of DNS and DNSSEC tutorials at CZ.NIC's Academy.
+CZ.NIC is the body governing the .cz domain. I was part of the Knot DNS project - an open source authoritative name server. At this time it is deployed at several root zone nodes, which makes it an important part of today's Internet infrastructure. A sister project, Knot Resolver, which shares some of the code, is now deployed as Cloudflare's 1.1.1.1. My tasks included creating highly optimized multithreaded code in C and writing functional tests in Python. I was also in charge of DNS and DNSSEC tutorials at CZ.NIC's Academy.
 }
 
 \section{Education}
@@ -62,17 +64,15 @@ CZ.NIC is the body governing the .cz domain. I was part of the Knot DNS project 
 \cventry{2010}{MS, Data Science}{Aalborg University}{Aalborg, DK}{}{}
 \cvline{}{\small Erasmus programme, Member of IWIS: Intelligent Web and Information Systems research group}
 \cventry{2007--2011}{BS, Information Technology}{Brno University of Technology}{Brno, CZ}{}{}
-\cvline{Percentile:}{\small 93}
 \cvline{Thesis:}{\small Measures of semantic similarity in folksonomies (graded A, topic: data science, scraping, NLP)}
 
 \section{Technical Experience}
-\subsection{Extremely Proficient With}
+\subsection{Proficient With}
 \cvline{languages}{C, C\texttt{++}, Python, Golang, SQL}
-\cvline{concepts}{Computer networks, Multi-threaded programming, Parallelization, Distributed systems, CPU architectures, NoSQL, Data science, Natural language processing (NLP), Agile, SCRUM, TDD, Architecting systems from scratch}
-\cvline{technologies}{Linux, TCP/IP, DNS, DNSSEC, Crypto, OpenMPI, Docker, Flask, SQLAlchemy, Alembic, Celery, AWS, MySQL, PostgreSQL, Elasticsearch, Redis, Kibana, Jenkins, Bash, Git, Nginx, Numpy, Scipy, Matplotlib, NLTK, Gensim, Pandas}
-\subsection{Have Experience With}
-\cvline{languages}{Scala, Node.js, CLisp, x86 Assembly, VHDL, Javascript, Elm, Lua, Java, CUDA, R}
-\cvline{concepts}{Machine learning, Image recognition, Speech recognition, GPU programming, MapReduce}
+\cvline{concepts}{Computer networks, Multi-threaded programming, Parallelization, Distributed systems, CPU architectures, NoSQL, Data pipelines, Natural language processing (NLP), Agile, SCRUM, TDD, Architecting systems from scratch, Database schema design}
+\cvline{technologies}{Linux, TCP/IP, DNS, DNSSEC, Crypto, OpenMPI, Docker, Flask, SQLAlchemy, Alembic, Celery, AWS, MySQL, PostgreSQL, SQL Server, Elasticsearch, Redis, Kibana, Jenkins, Bash, Git, Nginx, Numpy, Scipy, Matplotlib, NLTK, Gensim, Pandas}
+\subsection{Worked with}
+\cvline{}{x86 Assembly, Javascript, Elm, Lua, Java, CUDA, R, Machine learning, Image recognition, Speech recognition, GPU programming}
 
 \end{document}
 
