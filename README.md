@@ -9,3 +9,7 @@ Fedora dependencies:
 - texlive-moderncv
 
 build: pdflatex jan_kadlec_cv.tex
+
+Docker build because why not:
+
+- make cv
