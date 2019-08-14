@@ -7,7 +7,7 @@
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
 
-\documentclass[10pt,pdf,rrsans]{moderncv}
+\documentclass[11pt,pdf,rrsans]{moderncv}
 
 \usepackage{verbatim}
 
@@ -19,7 +19,7 @@
 \usepackage[utf8]{inputenc}
 
 % adjust the page margins
-\usepackage[scale=0.88]{geometry}
+\usepackage[scale=0.92]{geometry}
 
 % personal data
 \firstname{Jan}
@@ -44,18 +44,21 @@
 \section{Experience}
 
 \cventry{7/2016 - Present}{Software Engineer / Director}{Pythonic Limited}{London, UK}{}{
-Consulting - Python, C, computer networks, natural language processing, data pipelines, Python and CS mentoring. Initially, I've worked with a cloud provider on automating their managed database offerings deployments. My current client is one of the big 4 consultancies, where I've helped to build a machine learning solution from scratch. It started as a simple demo and evolved into a system which currently processes thousands of phone calls and documents a day. 
+Consulting - Python, C, computer networks, natural language processing, data pipelines, Python and CS mentoring. Initially, I've worked with a cloud provider on automating their managed database offerings deployments (RDS clone). My current client is one of the big 4 consultancy firms, where I've helped to build a machine learning solution from scratch. It started as a simple demo and evolved into a system which currently processes thousands of phone calls and documents a day. \endgraf My tasks include(d) database schema design (support for millions of phone calls), \textbf{database migration setup}, scalability, configuration management, helping to write a \textbf{workflow orchestration framework} based on Celery (similar to Airflow, but with focus on billing, automated scalability and configuration), GDPR support, extracting various (spectral) data from audio, audio files manipulation and browser playback, setting-up open-source transcription engines (Kaldi), \textbf{NLP search} in transcriptions, decision-tree support to cluster phone calls into categories, data retention mechanisms, selecting AWS technologies, creating local development environment without AWS using \textbf{localstack}, automated testing, working with data scientists on putting their \textbf{machine learning models into production}, participation on development of the speech-based ML models, which include \textbf{emotion detection} and speaker detection. I also act as a mentor to junior developers, most of which don't have a CS background. I was instrumental in implementing SW engineering practices such as rigorous code reviews, CI/CD pipelines, using Docker, repeatable builds and ease of local development. As a contractor, I am given high degree of autonomy to prioritize working on certain areas and make technical decisions. I'm also expected to act as a SME in Python, NLP, Speech processing technologies, scalability and performance.
 }
 
-\cventry{3/2016--6/2016}{Tech Entrepreneur}{Entrepreneur First}{London, UK}{}{
-Entrepreneur First is Europe's leading tech startup accelerator. Members are selected purely for their (technical) talents. I've explored two ideas at EF: measuring employee happiness from their mails and chats (technologies used: Python, NLTK, gensim, scikit-learn) and a smart testing solution for mobile devices.}
-
 \cventry{4/2015--9/2016}{Lead Developer}{Phonexia}{Brno, CZ}{}{
-Phonexia is a leading provider of speech technologies. I joined to create a new SaaS machine learning product, the main focus being making corporate meetings more efficient, but the platform was modular. Most of the solution was written in Python using Flask and Celery, some parts, such as realtime streaming support, were written in Go. Data storage via MySQL, Redis and Elasticsearch.
+Phonexia is a leading provider of speech technologies. I joined to create a new SaaS machine learning product, the main focus being making corporate meetings more efficient. Most of the solution was written in Python using Flask and python-rq, some parts, such as realtime streaming support, were written in Go. Data storage via MySQL, Redis and Elasticsearch.
+\endgraf
+\endgraf The project was a collaboration between multiple research-oriented companies and Brno University of Technology, Phonexia supplied speech technologies and core platform, other companies worked on knowledge base and semantic search. I was responsible for architecture of the whole platform, which included, among other things, database schema design, \textbf{REST API} design, \textbf{streaming} protocol design and \textbf{Elasticsearch} setup. I was a \textbf{technical leader} of a small team of developers. What I particularly enjoyed was collaboration with Speech Processing Group, which is a top research team where word2vec was invented.
 }
 
 \cventry{10/2010--4/2015}{Software engineer}{CZ.NIC Labs}{Prague, CZ}{}{
-	CZ.NIC is the body governing the .cz domain. Part of the Knot DNS project - an open-source authoritative DNS server. At this time it is deployed at several root-level DNS nodes. A sister project, Knot Resolver, which shares some of the code, is now deployed as \textbf{Cloudflare's 1.1.1.1}. My tasks included creating highly optimized multithreaded code in C and writing functional tests in Python. I was also in charge of DNS and DNSSEC tutorials at CZ.NIC's Academy.
+CZ.NIC is the body governing the .cz domain. I was part of the Knot DNS project - an open-source authoritative DNS server. At this time it is deployed at several root-level DNS nodes. A sister project, Knot Resolver, which shares some of the code, is now deployed as \textbf{Cloudflare's 1.1.1.1}. My tasks included creating highly optimized multithreaded code in C and writing functional tests in Python. I was also in charge of DNS and DNSSEC tutorials at CZ.NIC's Academy.\endgraf Knot DNS is written in C, from scratch, not using any existing DNS libraries. The focus is on qps performance, on-the-fly updates and DNSSEC. I worked on most parts of the project, including \textbf{data structure design} (optimized for memory efficiency and locality), \textbf{thread synchronization} using RCU, dynamic updates, zone data loading, automated cryptographic signing, journal support and testing. For testing, we used advanced tools such as \textbf{static analysis tools} (Coverity) and fuzzers, we also strived for 100 \% test coverage. Knot DNS is still actively developed and it is used by many top level DNS domains as well as big companies.
+}
+
+\cventry{3/2016--6/2016}{Tech Entrepreneur}{Entrepreneur First}{London, UK}{}{
+Entrepreneur First is Europe's leading tech startup accelerator. Members are selected purely for their (technical) talents. I've explored two ideas at EF: measuring employee happiness from their mails and chats (technologies used: Python, NLTK, gensim, scikit-learn) and a smart testing solution for mobile devices.
 }
 
 \section{Education}
@@ -64,13 +67,14 @@ Phonexia is a leading provider of speech technologies. I joined to create a new 
 \cventry{2010}{MS, Data Science}{Aalborg University}{Aalborg, DK}{}{}
 \cvline{}{\small Erasmus programme, Member of IWIS: Intelligent Web and Information Systems research group - NLP research}
 \cventry{2007--2011}{BS, Information Technology}{Brno University of Technology}{Brno, CZ}{}{}
+\cvline{Percentile:}{\small 93}
 \cvline{Thesis:}{\small Measures of semantic similarity in folksonomies (graded A, topic: data science, scraping, NLP)}
 
 \section{Technical Experience}
 \subsection{Proficient With}
 \cvline{languages}{C, C\texttt{++}, Python, Golang, SQL}
-\cvline{concepts}{Computer networks, Multi-threaded programming, Parallelization, Distributed systems, CPU architectures, NoSQL, Data pipelines, Natural language processing (NLP), Agile, SCRUM, TDD, Architecting systems from scratch, Database schema design, Machine learning}
-\cvline{technologies}{Linux, TCP/IP, DNS, DNSSEC, Crypto, OpenMPI, Docker, Flask, SQLAlchemy, Alembic, Celery, AWS, MySQL, PostgreSQL, SQL Server, Elasticsearch, Redis, Kibana, Jenkins, Bash, Git, Nginx, Numpy, Scipy, Matplotlib, NLTK, Gensim, Pandas, Scikit-learn, Spacy}
+\cvline{concepts}{Computer networks, Multi-threaded programming, Parallelization, Distributed systems, CPU architectures, NoSQL, Data pipelines, Natural language processing (NLP), Agile, SCRUM, Kanban, TDD, Architecting systems from scratch, Database schema design, Machine learning}
+\cvline{technologies}{Linux, Valgrind tools, gprof, gdb, TCP/IP, DNS, DNSSEC, Crypto, OpenMPI, docker, Flask, SQLAlchemy, alembic, celery, AWS, MySQL, PostgreSQL, SQL Server, Elasticsearch, Redis, Kibana, Jenkins, Bash, git, nginx, numpy, scipy, matplotlib, NLTK, gensim, pandas, scikit-learn, spaCy}
 \subsection{Worked with}
 \cvline{}{x86 Assembly, Javascript, Elm, Lua, Java, CUDA, R, Image recognition, Speech recognition, GPU programming, Spark, Tensorflow, Keras}
 
